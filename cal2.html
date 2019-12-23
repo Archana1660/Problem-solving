@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <pre>Create a calculator object. Create function that takes input as an array to do operations of more numbers
+    add(inputArr) -- add all numbers passed to the object.
+    subtract(inputArr) -- Subtract second number of array from first
+    multiply(inputArr) -- to multiply numbers provided in array
+    square(inputArr) -- you can send as many numbers you want, return value will be array with square of all numbers.
+  </pre>
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+
+<script>
+var calculator = {}
+//addition
+/*calculator.add = function(inputArr) {
+  var sum = 0;
+  
+  for(var i = 0; i < inputArr.length; i++) {
+    sum += inputArr[i];
+  }
+return (`Addition of the numbers in array ${inputArr} is ${sum}`);
+}
+
+document.getElementById("demo").innerHTML = calculator.add([1, 2, 3, 4, 5]);*/
+
+//subtraction
+/*calculator.sub = function(inputArr) {
+  var result = inputArr[inputArr.length-1];
+  
+ // for(var i = inputArr[inputArr.length-2]; i >= inputArr[0]; i--) {
+   // result = inputArr[inputArr.length-2] - inputArr[inputArr.length-1];
+  //}
+return (`Subtraction of the numbers in array ${inputArr} is ${result}`);
+}
+
+document.getElementById("demo1").innerHTML = calculator.sub([1,2,3,4,5]);*/
+
+//case 3: multiply
+/*calculator.multiply = function(inputArr) {
+  var result = 1;
+  
+  for(var i = 0; i < inputArr.length; i++) {
+    result *= inputArr[i];
+  }
+return (`Multiplication of the numbers in array ${inputArr} is ${result}`);
+}
+
+document.getElementById("demo2").innerHTML = calculator.multiply([1, 2, 3, 4, 5]);*/
+
+//case 4: square
+/*calculator.square = function(inputArr) {
+  var myArray = [];
+  var result = 1;
+  for (var i = 0; i < inputArr.length; i++) {
+    result = inputArr[i] * inputArr[i];
+    myArray.push(result);
+  }
+ return (`Square of the numbers in array ${inputArr} is ${myArray}`);
+}
+
+document.getElementById('demo3').innerHTML = calculator.square([2, 3, 4, 5, 6]);*/
+
+//inheritance
+
+var scientificCalculator = new Object(calculator);
+//document.getElementById("demo4").innerHTML = scientificCalculator.square([7,8,9]);
+//sin 
+scientificCalculator.sinTheta = function (num) {
+  result = Math.sin(num);
+  return (`sin theta of value : ${num} is ${result}`);
+}
+document.getElementById("demo4").innerHTML = scientificCalculator.sinTheta(0);
+
+//cos
+scientificCalculator.cosTheta = function (num) {
+  result = Math.cos(num);
+  return (`cos theta of value : ${num} is ${result}`);
+}
+document.getElementById("demo5").innerHTML = scientificCalculator.cosTheta(0);
+
+//tan
+scientificCalculator.tanTheta = function (num) {
+  result = Math.tan(num);
+  return (`tan theta of value : ${num} is ${result}`);
+}
+document.getElementById("demo6").innerHTML = scientificCalculator.tanTheta(0);
+
+//power of
+scientificCalculator.powerOf = function (num1, num2) {
+ // result = Math.pow(num1, num2);
+ var result = 1;
+  for (i = 0; i < num2; i++){
+    result *= num1;
+  }
+    return result;
+
+  //return (`Power ${num2} of the number: ${num1} is ${result}`);
+}
+document.getElementById("demo7").innerHTML = scientificCalculator.powerOf(3, 4);
+
+
+</script>
+
+</body>
+</html>

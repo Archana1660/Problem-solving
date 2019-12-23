@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate</title>
+</head>
+<body>
+    <pre>Create a Calculator Object. The object should have following functions:
+
+        add(a,b) -- to add 2 numbers
+        subtract(a,b) -- to subtract 2 numbers
+        multiply(a,b) -- to multiply 2 numbers
+        square(a) -- it should give squarenof a number.
+    </pre>
+    <button onclick="calculator.add(1, 2);">Add</button>
+    <p id="add"></p>
+
+    <button onclick="calculator.sub(1, 2);">Sub</button>
+    <p id="subtract"></p>
+
+    <button onclick="calculator.multiply(1, 2);">Multiply</button>
+    <p id="multiply"></p>
+
+    <button onclick="calculator.square(2);">square</button>
+    <p id="square"></p>
+    <script>
+       
+    var calculator = {};
+    calculator.add = function (a, b){
+        calculator.addition = a+b;
+        document.getElementById('add').innerHTML = `Addition of ${a} and ${b} is ${this.addition}`;
+    }
+    calculator.sub = function (a, b){
+        calculator.subtraction = b-a;
+        document.getElementById('subtract').innerHTML = `Subtraction of ${a} and ${b} is ${this.subtraction}`;
+    }
+    calculator.multiply= function (a, b){
+        calculator.multiplication = a*b;
+        document.getElementById('multiply').innerHTML = `Multiply of ${a} and ${b} is ${this.multiplication}`;
+    }
+    calculator.square = function (a){
+        calculator.squareOfNumber = a*a;
+        document.getElementById('square').innerHTML = `Square of ${a} is ${this.squareOfNumber}`;
+    }
+    </script>
+
+</body>
+</html>
