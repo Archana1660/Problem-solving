@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function firstFunc() {
+  console.log ("hi");
+}
+
+firstFunc();
+
+//second step to arrow function
+var secondFunc = function() {
+  console.log("gi");
+}
+
+secondFunc();
+
+//final step to arrow function
+
+var thirdFunc = () => console.log("hi arrow");
+thirdFunc();
+
+//other method with return no written
+var fourthFunc = () => "hi return value";
+console.log(fourthFunc());
+
+//arrow with multiple lines
+var fifthFunc = () => {
+  let value = 5;
+  return value;
+}
+console.log(fifthFunc());
+
+// arrow without brackets
+let sixthFunc = val =>  val*2;
+console.log(sixthFunc(5))
+
+    </script>
+</body>
+</html>
