@@ -1,0 +1,28 @@
+<script>
+    //For array as default
+    function arr1(value, arr = []){
+      arr.push(value);
+      return arr;
+    }
+    console.log(arr1(1));
+    
+    //For function call as default
+    function add( multiplyFirst = multiplication()){
+      console.log(multiplyFirst);
+      return null;
+    }
+    
+    function multiplication() {
+      return 2*3;
+    }
+     add();
+    
+    //for default print
+    
+    function studentDetails(name, age, message= `${name} with ${age} years old`)
+    {
+      return [name, age, message];
+    }
+    console.log(studentDetails('Anand', '20'));
+    console.log(studentDetails('Ravi', '22', 'Bangalore'));
+  </script>
