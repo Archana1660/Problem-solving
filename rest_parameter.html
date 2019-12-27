@@ -11,6 +11,10 @@
         // es6 rest parameter 
         function fun(...input){ 
             let sum = 0; 
+            /* using normal for loop
+            for(let i=0; i<input.length;i++){ 
+                sum += input[i];
+              } */
             for(let i of input){ 
                 sum+=i; 
             } 
