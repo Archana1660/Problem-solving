@@ -12,6 +12,7 @@
   const array1 = [1,2,3,4,5,6];
     var array2 = [];
     var array3 = [];
+    var array4 = [];
     var collect;
     var collect1;
     var newArg = function(){
@@ -23,7 +24,7 @@
     return array2;
       //document.getElementById('demo').innerHTML
 };
-    newArg();
+    //newArg();
     
     var newArg1 = function(){
       array1.forEach((element,index) => {
@@ -34,8 +35,17 @@
       });
       document.getElementById("demo").innerHTML = array3;
     }
-   newArg1();
+  // newArg1();
     
+    /*updated below*/
+    var check = function(...args){
+      //console.log(args);
+      args.forEach(function(element, index){
+        array4[index] = 2 * element;
+      })
+      console.log(array4); // 2,4,6,8,10
+    }
+    check(1,2,3,4,5);
     
   </script>
 </body>
