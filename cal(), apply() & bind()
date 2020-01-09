@@ -1,0 +1,31 @@
+
+var pokemon = {
+    firstname: 'Pika',
+    lastname: 'Chu ',
+   
+};
+
+var pokemon1 = {
+  firstname: 'Baba',
+    lastname: 'Sword ',
+}
+
+var pokemon2 = {
+  firstname: 'Cha',
+    lastname: 'Rizard ',
+}
+
+var pokemonName = function(snack, hobby) {
+    console.log(this.firstname + ' ' + this.lastname + ' loves ' + snack + ' and ' + hobby);
+};
+
+//call
+pokemonName.call(pokemon,'sushi', 'algorithms');
+
+//apply
+pokemonName.apply(pokemon1,['grass', 'playing']);
+
+//bind
+var third = pokemonName.bind(pokemon2,'fire','ball')
+
+third();
