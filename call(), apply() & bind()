@@ -48,3 +48,21 @@ function myFunc(a,b,c){
   console.log(a,b,c)
 }
 */
+
+//push with call(), apply()
+/*let vegetables = ['parsnip', 'potato'];
+let moreVegs = ['celery', 'beetroot'];
+
+Array.prototype.push.apply(vegetables,moreVegs);
+console.log(vegetables);*/
+
+//pop with call(), apply() on array-like object
+let vegetables = {0: 'parsnip', 1: 'potato', 3: 'tomato', 4: 'beetroot', length: 5};
+
+var newVeg = Array.prototype.pop.call(vegetables);
+//console.log(newVeg);
+
+//reverse with call on array-like object
+let myFish = {0:'angel', 1:'clown', 2:'mandarin', 3:'sturgeon', length: 4};
+
+var popped = Array.prototype.reverse.call(myFish); //same syntax for using apply( )
