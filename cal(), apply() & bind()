@@ -2,7 +2,6 @@
 var pokemon = {
     firstname: 'Pika',
     lastname: 'Chu ',
-   
 };
 
 var pokemon1 = {
@@ -27,5 +26,49 @@ pokemonName.apply(pokemon1,['grass', 'playing']);
 
 //bind
 var third = pokemonName.bind(pokemon2,'fire','ball')
-
 third();
+
+/****************************/
+
+var pokemon = {
+    firstName: 'Pika',
+    lastName: 'Chu ',
+};
+
+let getPokeName = function() {
+    var fullName = this.firstName+ ' ' +this.lastName;
+    return fullName;
+}
+
+/*var pokemonName = function() {
+    console.log(getPokeName.call(pokemon) + ' i choose you');
+};*/
+
+var pokemonName = function(snack, hobby) {
+    console.log(getPokeName.call(pokemon) + ' loves ' + snack + ' and ' + hobby);
+};
+
+var logPokemon = pokemonName;
+debugger;
+logPokemon('chips', 'Playing');
+
+/*******************************/
+
+var pokemon = {
+    firstName: 'Pika',
+    lastName: 'Chu ',
+    getPokeName: function() {
+        var fullName = this.firstName+ ' ' +this.lastName;
+        return fullName;
+  }
+};
+ 
+var pokemonName = function(snack, hobby) {
+    console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
+};
+
+//var logPokemon = pokemonName.call(pokemon,'chips', 'Playing');
+//logPokemon();//TypeError: logPokemon is not a function
+
+var logPokemon = pokemonName.bind(pokemon,'chips', 'Playing');
+logPokemon();  //Pika Chu  loves chips and Playing
