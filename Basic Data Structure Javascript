@@ -1,0 +1,10 @@
+//Remove elements from beginning and end of an array
+
+function arr(theArray) {
+
+  let arr1 = theArray.pop();
+  let arr2 = theArray.shift();
+  
+  return[arr1, arr2];
+}
+console.log(arr([1,2,3,4,5]));
