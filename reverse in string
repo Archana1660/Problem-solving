@@ -1,0 +1,38 @@
+//lengthy way:-
+
+function reverseString(str) {
+  let resultStr = [];
+  for(let i = str.length-1; i >= 0; i--){
+    resultStr.push(str[i]);// push the characters in an array
+  }
+  return resultStr.join('');// join by using join() in array
+}
+
+reverseString("hello");
+
+//using split
+function reverseString(str) {
+  let result = str.split('');  //change to array of charater;
+  let reverseStr = result.reverse(); //reverse the items in array;
+  let reverseResult = reverseStr.join(''); // join the items in array to convert it to string
+  // can be done as---------- return str.split('').reverse().join('');
+  }
+reverseString("hello");
+
+//appending the str value in new string
+let reverseStr='';
+ function reverseString(str){
+    for(let i = str.length-1; i>=0; i--){
+    reverseStr += str[i];
+  }
+   return reverseStr;
+}
+console.log(reverseString("hello"));
+
+//using spread operator
+ function reverseString(str){
+   let str1 = [...str].reverse().join('');
+   return str1;
+}
+
+console.log(reverseString("hello"));
