@@ -1,0 +1,30 @@
+//endsWith(); The endsWith() method determines whether a string ends with the characters of a specified string,
+returning true or false as appropriate.
+:- function findElement(arr, func) {
+      return arr.endsWith(func);
+    }
+    
+console.log(findElement("Oxford", "d"));
+
+//.find();  Array.find() method in JavaScript returns the value of the first element in the array 
+that satisfies the provided testing function.
+:- w/o find
+ function findElement(arr, func) {
+     let num;
+     for(let i=0; i< arr.length; i++){
+       num = arr[i];
+       if(func(num)){
+         return num;
+       }
+     }
+   }
+    
+console.log(findElement([1, 10, 2, 8], num => {
+  return num % 2 === 0;}));
+  :- with find
+  function findElement(arr, func) {
+     return arr.find(func);
+   }
+    
+console.log(findElement([1, 10, 2, 8], num => {
+  return num % 2 === 0;}));
