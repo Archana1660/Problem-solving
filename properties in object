@@ -14,7 +14,7 @@ function Dog(name, color){
     let ownProperty = [];
     let prototypeProperty = [];
     
-    for( property in pug){
+    for( let property in pug){
       if(pug.hasOwnProperty(property)){
          ownProperty.push(property)
       }else {
